@@ -53,5 +53,5 @@ jobs:
     # Registry hostname
          # registry: # optional
     # Image tag
-          tag: ${{ INPUT_{version_tag} }}
+          tag: ${{ INPUT_version_tag }}
       
