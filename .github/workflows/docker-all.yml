@@ -53,5 +53,5 @@ jobs:
     # Registry hostname
          # registry: # optional
     # Image tag
-          tag: ${{ steps.Generate_dat_tag.outputs.version_tag }}
+          tag: ${{ steps.Generate_dat_tag.outputs.version }}
       
