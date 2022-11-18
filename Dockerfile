@@ -1,10 +1,10 @@
 ## Will this work? Whose to say??
 #  Goal - get this dockerfile things cooking
 #
+# Updated Node from 16 to 19. Maybe it works?
 #
 #
-#
-FROM node:16 as builder
+FROM node:19 as builder
 
 WORKDIR /app
 
@@ -22,7 +22,7 @@ RUN mkdir -p ./public ./data \
     && mv ./client/build/* ./public \
     && rm -rf ./client
 
-FROM node:16-alpine
+FROM node:19-alpine
 
 COPY --from=builder /app /app
 
