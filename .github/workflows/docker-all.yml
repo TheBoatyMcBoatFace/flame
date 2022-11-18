@@ -19,7 +19,7 @@ jobs:
         name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v2
       -
-        name: Generate dat tag
+        name: Generate_dat_tag
         uses: paulhatch/semantic-version@v4.0.2
         with:
     # The prefix to use to identify tags
@@ -53,5 +53,5 @@ jobs:
     # Registry hostname
          # registry: # optional
     # Image tag
-          tag: ${{ INPUT_version_tag }}
+          tag: ${{ steps.Generate_dat_tag.outputs.version_tag }}
       
