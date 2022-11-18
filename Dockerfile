@@ -4,7 +4,7 @@
 # Updated Node from 16 to 19. Maybe it works?
 #
 #
-FROM node:19 as builder
+FROM node:16 as builder
 
 WORKDIR /app
 
@@ -22,7 +22,7 @@ RUN mkdir -p ./public ./data \
     && mv ./client/build/* ./public \
     && rm -rf ./client
 
-FROM node:19-alpine
+FROM node:16-alpine
 
 COPY --from=builder /app /app
 
