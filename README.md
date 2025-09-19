@@ -4,7 +4,7 @@
 
 ## Description
 
-Flame is self-hosted startpage for your server. This is a direct fork from [pawelmalak](https://github.com/pawelmalak/flame) with [secutity updates](https://github.com/spiicytuna/flame/commit/a8559b4e509e00e33f3947b5e9495c4e90759e6f) applied and built-in [healthcheck](https://github.com/spiicytuna/flame/commit/a02bf19f39a58c266825f0727e5ef21a7f953451) path (oh and not important but fun, heh, [updated mdi icons](https://github.com/spiicytuna/flame/commit/c9f11816d9c84379fac16dd589d178fae6cb81e4)). 
+Flame is self-hosted startpage for your server. This is a direct fork from [pawelmalak](https://github.com/pawelmalak/flame) with [secutity updates](https://github.com/spiicytuna/flame/commit/a8559b4e509e00e33f3947b5e9495c4e90759e6f) applied and built-in [healthcheck](https://github.com/spiicytuna/flame/commit/a02bf19f39a58c266825f0727e5ef21a7f953451) path (oh and not important but fun, heh, [updated mdi icons](https://github.com/spiicytuna/flame/commit/c9f11816d9c84379fac16dd589d178fae6cb81e4)).
 
 Flame is very easy to setup and use. With built-in editors, it allows you to setup your very own application hub in no time - no file editing necessary.
 
@@ -50,17 +50,15 @@ docker buildx build \
   --platform linux/arm/v7,linux/arm64,linux/amd64 \
   -f .docker/Dockerfile.multiarch \
   -t ghcr.io/spiicytuna/flame:master \
-  . 
+  .
 ```
 
 #### Docker-Compose
 
 ```yaml
-version: "3.8"
-
 services:
   flame:
-    image: ghcr.io/spiicytuna/flame:dev
+    image: ghcr.io/spiicytuna/flame-dev:latest
     container_name: flame
     restart: unless-stopped
     ports:
